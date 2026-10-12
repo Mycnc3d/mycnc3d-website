@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MYCNC3D | Advanced Additive Manufacturing</title>
+
+  <meta name="description"
+        content="MYCNC3D develops advanced additive manufacturing technologies, multi-axis FDM systems, high-flow extrusion solutions and advanced toolpath generation.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0f14;
+      color: #f2f5f7;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 8%;
+      background:
+        radial-gradient(circle at 70% 40%, #17314a 0%, transparent 35%),
+        linear-gradient(135deg, #0b0f14, #101820);
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      color: #aab4bd;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      max-width: 950px;
+    }
+
+    .tag {
+      color: #71b7ff;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: 0.95;
+      margin-bottom: 25px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.4rem, 3vw, 2.5rem);
+      font-weight: 400;
+      color: #b9c4cd;
+      margin-bottom: 30px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 1.1rem;
+      color: #9ba7b1;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 14px 25px;
+      border: 1px solid #71b7ff;
+      border-radius: 4px;
+      color: #71b7ff;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #71b7ff;
+      color: #081018;
+    }
+
+    section {
+      padding: 90px 8%;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      max-width: 750px;
+      color: #9ba7b1;
+      margin-bottom: 45px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #111820;
+      border: 1px solid #202a33;
+      padding: 35px;
+      min-height: 230px;
+      border-radius: 6px;
+    }
+
+    .card h3 {
+      margin-bottom: 16px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      color: #98a5af;
+    }
+
+    .research {
+      background: #0e141b;
+    }
+
+    .research-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 35px;
+    }
+
+    .research-item {
+      border-left: 3px solid #71b7ff;
+      padding: 15px 20px;
+      background: #121a22;
+    }
+
+    .contact {
+      text-align: center;
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+
+    .contact p {
+      color: #9ba7b1;
+      margin-top: 15px;
+    }
+
+    footer {
+      border-top: 1px solid #202a33;
+      padding: 30px 8%;
+      display: flex;
+      justify-content: space-between;
+      color: #71808c;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid,
+      .research-list {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      header {
+        min-height: 80vh;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <nav>
+    <div class="logo">MYCNC3D</div>
+
+    <div class="nav-links">
+      <a href="#technology">Technology</a>
+      <a href="#research">R&D</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+
+    <div class="tag">
+      Advanced Additive Manufacturing
+    </div>
+
+    <h1>MYCNC3D</h1>
+
+    <h2>
+      Engineering the next generation of additive manufacturing.
+    </h2>
+
+    <p>
+      MYCNC3D is a French research and development company focused on
+      advanced FDM technologies, multi-axis additive manufacturing,
+      high-performance extrusion systems and next-generation
+      manufacturing software.
+    </p>
+
+    <a class="button" href="#technology">
+      Discover our technology
+    </a>
+
+  </div>
+
+</header>
+
+
+<section id="technology">
+
+  <h2 class="section-title">Technology</h2>
+
+  <p class="section-intro">
+    We develop hardware, software and manufacturing processes designed
+    to push the capabilities of industrial FDM additive manufacturing.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Multi-axis Additive Manufacturing</h3>
+
+      <p>
+        Development of multi-axis and non-planar FDM systems designed
+        to overcome the limitations of conventional layer-by-layer
+        manufacturing.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>High-Flow Extrusion</h3>
+
+      <p>
+        Research and development of high-performance extrusion
+        technologies for high material flow rates and industrial
+        manufacturing applications.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Advanced Toolpaths</h3>
+
+      <p>
+        Development of advanced slicing, trajectory generation,
+        post-processing and intelligent manufacturing software.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="research" class="research">
+
+  <h2 class="section-title">Research & Development</h2>
+
+  <p class="section-intro">
+    MYCNC3D combines mechanical engineering, extrusion technology,
+    machine development and software research to explore new approaches
+    to additive manufacturing.
+  </p>
+
+  <div class="research-list">
+
+    <div class="research-item">
+      Multi-axis FDM printing
+    </div>
+
+    <div class="research-item">
+      Non-planar and multiplanar manufacturing
+    </div>
+
+    <div class="research-item">
+      High-flow extrusion systems
+    </div>
+
+    <div class="research-item">
+      Advanced slicers and toolpath generation
+    </div>
+
+    <div class="research-item">
+      AI-assisted manufacturing workflows
+    </div>
+
+    <div class="research-item">
+      Custom additive manufacturing platforms
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+  <div class="tag">Contact</div>
+
+  <h2 class="section-title">
+    Let's build the future of additive manufacturing.
+  </h2>
+
+  <p>
+    MYCNC3D SAS<br>
+    France
+  </p>
+
+  <a class="button" href="mailto:yannick@mycnc3d.com">
+    yannick@mycnc3d.com
+  </a>
+
+</section>
+
+
+<footer>
+
+  <div>
+    © 2026 MYCNC3D SAS
+  </div>
+
+  <div>
+    Advanced Additive Manufacturing R&D
+  </div>
+
+</footer>
+
+</body>
+</html>
