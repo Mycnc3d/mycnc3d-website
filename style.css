@@ -119,3 +119,51 @@
     width: 210px !important;
   }
 }
+
+/* === Large MYCNC3D header logo === */
+
+.site-nav .brand {
+  width: 640px !important;
+  max-width: none !important;
+  flex: 0 0 640px !important;
+}
+
+.site-nav .brand img {
+  display: block;
+  width: 640px !important;
+  max-width: none !important;
+  height: auto !important;
+}
+
+/* Garde la navigation bien alignée */
+.site-nav {
+  align-items: center;
+}
+
+.nav-links {
+  margin-left: auto;
+}
+
+/* Tablettes */
+@media (max-width: 1100px) {
+  .site-nav .brand {
+    width: 480px !important;
+    flex-basis: 480px !important;
+  }
+
+  .site-nav .brand img {
+    width: 480px !important;
+  }
+}
+
+/* Téléphones */
+@media (max-width: 800px) {
+  .site-nav .brand {
+    width: 300px !important;
+    flex-basis: 300px !important;
+  }
+
+  .site-nav .brand img {
+    width: 300px !important;
+  }
+}
