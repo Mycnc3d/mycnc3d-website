@@ -167,3 +167,12 @@
     width: 300px !important;
   }
 }
+
+/* === Final vertical hero adjustment === */
+
+@media (min-width: 1101px) {
+  .hero {
+    position: relative;
+    top: -65px;
+  }
+}
