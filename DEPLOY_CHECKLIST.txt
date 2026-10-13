@@ -1,0 +1,30 @@
+MYCNC3D V2.1 — FINAL DEPLOYMENT CHECKLIST
+========================================
+
+BEFORE COMMIT
+[ ] Back up/download the current GitHub repository.
+[ ] Extract MYCNC3D_V2_1_PRODUCTION.zip locally.
+[ ] Replace the repository root contents with the extracted files.
+[ ] Confirm CNAME contains exactly: mycnc3d.com
+[ ] Do not change Squarespace/Google Workspace DNS or email records.
+
+DEPLOY
+[ ] Commit to main.
+[ ] Suggested message: Publish MYCNC3D V2.1 production site
+[ ] Wait for the GitHub Pages deployment to complete.
+
+POST-DEPLOY TESTS
+[ ] Open https://mycnc3d.com/ and hard-refresh (Ctrl+F5).
+[ ] Check EN / FR switch on homepage.
+[ ] Check all six project pages in EN and FR.
+[ ] Check the hamburger menu on a phone-width browser.
+[ ] Check legal pages EN and FR.
+[ ] Check Contact / mailto links.
+[ ] Open a deliberately invalid URL to verify 404.html.
+[ ] Confirm HTTPS remains active.
+[ ] Check the page preview when sharing mycnc3d.com (Open Graph image).
+
+DO NOT MODIFY DURING THIS DEPLOYMENT
+- Domain DNS records
+- Google Workspace MX records
+- GitHub Pages custom-domain configuration unless GitHub reports an explicit issue
