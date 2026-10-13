@@ -74,3 +74,48 @@
     transform: none;
   }
 }
+
+/* === Correction taille logo header === */
+
+.site-nav .brand {
+  width: 320px !important;
+  max-width: none !important;
+  flex: 0 0 320px;
+}
+
+.site-nav .brand img {
+  display: block;
+  width: 320px !important;
+  max-width: none !important;
+  height: auto;
+}
+
+/* Logo du footer */
+.footer-brand {
+  width: 260px;
+  max-width: none;
+}
+
+.footer-logo {
+  display: block;
+  width: 260px !important;
+  max-width: none !important;
+  height: auto;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .site-nav .brand {
+    width: 220px !important;
+    flex-basis: 220px;
+  }
+
+  .site-nav .brand img {
+    width: 220px !important;
+  }
+
+  .footer-brand,
+  .footer-logo {
+    width: 210px !important;
+  }
+}
