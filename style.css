@@ -176,3 +176,31 @@
     top: -65px;
   }
 }
+
+/* === Footer finishing adjustments === */
+
+.footer-brand {
+  width: 320px !important;
+  max-width: none !important;
+}
+
+.footer-logo {
+  width: 320px !important;
+  max-width: none !important;
+  height: auto !important;
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+}
+
+.footer-bottom a {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .footer-brand,
+  .footer-logo {
+    width: 240px !important;
+  }
+}
