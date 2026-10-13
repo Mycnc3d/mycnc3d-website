@@ -17,3 +17,60 @@
 @media(max-width:380px){.brand{width:270px}.footer-brand{width:250px}}
 
 .language-switch{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;font-size:12px;letter-spacing:.08em;border-left:1px solid var(--line);padding-left:20px;line-height:1.5}.language-switch a{padding:7px 2px;color:var(--muted)}.language-switch a[aria-current="page"]{color:#6ac8ff;border-bottom:2px solid var(--blue);font-weight:700}.language-switch>span{color:#536675}.nav-links{flex-wrap:wrap}.legal .language-switch a{text-decoration:none}@media(max-width:900px){.language-switch{padding-left:14px}.nav-links{gap:18px}}@media(max-width:380px){.nav-links{gap:15px}.language-switch{padding-left:12px}}
+
+/* === MYCNC3D finishing adjustments === */
+
+/* Logo légèrement plus grand */
+.brand img {
+  width: 280px;
+  height: auto;
+}
+
+.footer-logo {
+  width: 230px;
+  height: auto;
+}
+
+/* Hero plus compact et plus cohérent */
+.hero {
+  padding-top: 55px;
+  padding-bottom: 65px;
+  column-gap: 42px;
+}
+
+/* Texte descriptif principal un peu plus lisible */
+.hero .lead {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  max-width: 610px;
+}
+
+/* Image légèrement rapprochée du texte */
+.hero-visual {
+  transform: translateX(-18px);
+}
+
+/* Mobile : garder la mise en page propre */
+@media (max-width: 800px) {
+  .brand img {
+    width: 220px;
+  }
+
+  .footer-logo {
+    width: 200px;
+  }
+
+  .hero {
+    padding-top: 35px;
+    padding-bottom: 50px;
+    row-gap: 32px;
+  }
+
+  .hero .lead {
+    font-size: 1rem;
+  }
+
+  .hero-visual {
+    transform: none;
+  }
+}
