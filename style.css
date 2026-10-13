@@ -204,3 +204,14 @@
     width: 240px !important;
   }
 }
+.research-list li {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  padding: 18px 16px;
+}
+
+@media (max-width: 800px) {
+  .research-list li {
+    font-size: 0.9rem;
+  }
+}
