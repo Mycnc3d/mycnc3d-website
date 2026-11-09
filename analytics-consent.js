@@ -61,12 +61,16 @@
   }
   function eraseCookies() {
     const domains = ['', location.hostname, '.' + location.hostname, 'mycnc3d.com', '.mycnc3d.com'];
-    document.cookie.split(';').forEach(part => {
+    let cookieList;
+    try { cookieList = document.cookie.split(';'); } catch (_) { return; }
+    cookieList.forEach(part => {
       const n = part.split('=')[0].trim();
       if (!/^_ga($|_)/.test(n)) return;
       domains.forEach(domain => {
-        document.cookie = n + '=; Max-Age=0; path=/; SameSite=Lax' +
-          (domain ? '; domain=' + domain : '');
+        try {
+          document.cookie = n + '=; Max-Age=0; path=/; SameSite=Lax' +
+            (domain ? '; domain=' + domain : '');
+        } catch (_) { /* Cookie access may be disabled by browser settings. */ }
       });
     });
   }
