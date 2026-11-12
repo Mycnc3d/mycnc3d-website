@@ -39,6 +39,7 @@
   };
   let choice = getChoice();
   let loaded = false;
+  let transientChoice = false;
   window['ga-disable-' + ID] = choice !== true;
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
@@ -75,8 +76,10 @@
     });
   }
   const remember = yes => {
-    try { localStorage.setItem(KEY, JSON.stringify({ choice: yes ? 'yes' : 'no', time: Date.now() })); }
-    catch (_) { /* Blocked storage: apply choice for current page only. */ }
+    try {
+      localStorage.setItem(KEY, JSON.stringify({ choice: yes ? 'yes' : 'no', time: Date.now() }));
+      transientChoice = false;
+    } catch (_) { transientChoice = true; /* Apply choice for this page only. */ }
   };
 
   function init() {
@@ -120,6 +123,7 @@
 
     document.body.append(banner, settings, overlay);
     let priorFocus = null;
+    let background = [];
     const sync = () => {
       banner.hidden = choice !== null;
       settings.hidden = choice === null;
@@ -127,6 +131,8 @@
     };
     const close = () => {
       overlay.hidden = true;
+      background.forEach(([el, wasInert]) => { el.inert = wasInert; });
+      background = [];
       document.body.classList.remove('myc-consent-dialog-open');
       if (priorFocus && priorFocus.isConnected && !priorFocus.closest('[hidden]')) {
         priorFocus.focus();
@@ -136,6 +142,10 @@
       priorFocus = document.activeElement;
       overlay.querySelector('#myc-ga4-switch').checked = choice === true;
       overlay.hidden = false;
+      background = Array.from(document.body.children)
+        .filter(el => el !== overlay)
+        .map(el => [el, el.inert]);
+      background.forEach(([el]) => { el.inert = true; });
       document.body.classList.add('myc-consent-dialog-open');
       overlay.querySelector('.myc-consent-close').focus();
     };
@@ -148,10 +158,35 @@
         window.gtag('consent', 'update', { analytics_storage: 'denied' });
         eraseCookies();
       }
-      close();
       sync();
+      close();
       if (needsReload) location.reload(); // Remove previously loaded Google scripts.
     };
+    // Honour withdrawal/clearing in another tab and expiry on a long-lived page.
+    const reconcile = () => {
+      if (transientChoice) return;
+      const current = getChoice();
+      if (current === choice) return;
+      const needsReload = current !== true && loaded;
+      choice = current;
+      window['ga-disable-' + ID] = current !== true;
+      if (current !== true) {
+        window.gtag('consent', 'update', { analytics_storage: 'denied' });
+        eraseCookies();
+      }
+      sync();
+      close();
+      if (needsReload) location.reload();
+    };
+    window.addEventListener('storage', event => {
+      if (event.key === KEY || event.key === null) {
+        transientChoice = false;
+        reconcile();
+      }
+    });
+    window.addEventListener('pageshow', reconcile);
+    document.addEventListener('visibilitychange', reconcile);
+    window.setInterval(reconcile, 60000);
     [banner, overlay].forEach(el => el.addEventListener('click', event => {
       const control = event.target.closest('button[data-consent]');
       if (!control) return;
