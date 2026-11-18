@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mycnc3d.com/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://mycnc3d.com/index-fr.html</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://mycnc3d.com/index-de.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://mycnc3d.com/projects/multi-axis-fdm.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://mycnc3d.com/projects/fdm-multi-axes.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://mycnc3d.com/projects/non-planar-deposition.html</loc><lastmod>2026-11-16</lastmod></url>
@@ -14,4 +15,11 @@
   <url><loc>https://mycnc3d.com/projects/developpement-slicer-avance.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://mycnc3d.com/projects/ai-assisted-manufacturing.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://mycnc3d.com/projects/fabrication-assistee-ia.html</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://mycnc3d.com/projects/multi-axis-fdm-de.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://mycnc3d.com/projects/non-planar-deposition-de.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://mycnc3d.com/projects/high-flow-extrusion-de.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://mycnc3d.com/projects/advanced-slicer-development-de.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://mycnc3d.com/projects/advanced-toolpaths-de.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://mycnc3d.com/projects/ai-assisted-manufacturing-de.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://mycnc3d.com/legal-notice-de.html</loc><lastmod>2026-11-18</lastmod></url>
 </urlset>
